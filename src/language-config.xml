@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items>
+	<item>
+		<label>English</label>
+		<data>en</data>
+	</item>
+	<item>
+		<label>Japanese</label>
+		<data>ja</data>
+	</item>
+	<item>
+		<label>Chinese</label>
+		<data>zh</data>
+	</item>
+	<item>
+		<label>Italian</label>
+		<data>it</data>
+	</item>
+	<item>
+		<label>Spanish</label>
+		<data>es</data>
+	</item>
+	<item>
+		<label>French</label>
+		<data>fr</data>
+	</item>
+	<item>
+		<label>German</label>
+		<data>de</data>
+	</item>
+	<item>
+		<label>Russian</label>
+		<data>ru</data>
+	</item>
+	<item>
+		<label>Korean</label>
+		<data>ko</data>
+	</item>
+</items>

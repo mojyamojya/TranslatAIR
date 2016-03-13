@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fv:HistoryWindowBase xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:fv="jp.flashcast.translator.air.views.*"
+	width="680" height="345" horizontalAlign="center" verticalAlign="middle" backgroundColor="#000000" creationComplete="{onCreationCompleteHandler(event)}">
+	<mx:Script>
+		<![CDATA[
+			import jp.flashcast.translator.air.util.Locale;
+		]]>
+	</mx:Script>
+	<mx:VBox width="100%" height="100%" horizontalAlign="center" verticalAlign="middle">
+		<mx:HBox width="100%" height="100%" paddingTop="5" paddingLeft="5" paddingRight="5">
+			<mx:DataGrid id="dgHistory" width="100%" verticalScrollPolicy="on" height="280" wordWrap="true" variableRowHeight="true" doubleClickEnabled="true" doubleClick="{onDgHistoryDoubleClickHandler(event)}" alternatingItemColors="[#8D91A9, #CBD1FD]" borderColor="#FFFFFF" color="#000000">
+				<mx:columns>
+					<mx:DataGridColumn headerText="{Locale.localize('翻訳前')}" dataField="original" width="125"/>
+					<mx:DataGridColumn headerText="{Locale.localize('言語')}" dataField="languagefrom" width="70"/>
+					<mx:DataGridColumn headerText="{Locale.localize('翻訳後')}" dataField="translated" width="125"/>
+					<mx:DataGridColumn headerText="{Locale.localize('言語')}" dataField="languageto" width="70"/>
+					<mx:DataGridColumn headerText="{Locale.localize('翻訳日時')}" dataField="datetime" width="115"/>
+				</mx:columns>
+			</mx:DataGrid>
+		</mx:HBox>
+		<mx:HBox width="100%" height="28" horizontalAlign="right" paddingRight="5">
+			<mx:Button label="{Locale.localize('閉じる')}" id="btnClose" click="{close()}"/>
+		</mx:HBox>
+	</mx:VBox>
+</fv:HistoryWindowBase>

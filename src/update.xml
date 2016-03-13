@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<update xmlns="http://ns.adobe.com/air/framework/update/description/1.0">
+	<version>1.0.3</version>
+	<url>http://live-cast.asia/works/translator/air/ja/TranslatAIR_ja.air</url>
+	<description>
+		<text xml:lang="ja">
+			<![CDATA[
+				Suport to XAuth.
+			]]>
+		</text>
+	</description>
+</update>

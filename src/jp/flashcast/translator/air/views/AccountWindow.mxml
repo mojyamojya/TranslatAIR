@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fv:AccountWindowBase xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:fv="jp.flashcast.translator.air.views.*"
+	layout="absolute" width="300" height="158" title="Sign In" showCloseButton="true" close="PopUpManager.removePopUp(this)" backgroundColor="#000000" creationComplete="{focusManager.setFocus(txtAccount)}">
+	<mx:Script>
+		<![CDATA[
+			import jp.flashcast.translator.air.util.Locale;
+			import mx.events.CloseEvent;
+			import mx.managers.PopUpManager;
+		]]>
+	</mx:Script>
+	<mx:Label x="10" y="10" text="{Locale.localize('ID(or email)')}" color="#FFFFFF"/>
+	<mx:Label x="10" y="36" text="{Locale.localize('パスワード')}" color="#FFFFFF"/>
+	<mx:TextInput x="92" y="8" width="178" id="txtAccount" backgroundColor="#6C6D71" color="#FFFFFF" imeMode="{IMEConversionMode.ALPHANUMERIC_HALF}" focusIn="{IME.enabled = false}"/>
+	<mx:TextInput x="92" y="34" width="178" displayAsPassword="true" id="txtPassword" backgroundColor="#6C6D71" color="#FFFFFF"/>
+	<mx:CheckBox x="10" y="62" label="{Locale.localize('次回から省略する')}" id="chkSave" color="#FFFFFF"/>
+	<mx:Button x="92" y="86" label="OK" id="btnOK" click="btnOKClickHandler(event)"/>
+	<mx:Button x="143" y="86" label="Cancel" id="btnCancel" click="dispatchEvent(new CloseEvent(CloseEvent.CLOSE))"/>
+</fv:AccountWindowBase>

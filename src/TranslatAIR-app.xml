@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://ns.adobe.com/air/application/2.0">
+	<id>TranslatAIR</id>
+	<filename>TranslatAIR</filename>
+	<name>TranslatAIR</name>
+	<version>1.0.4</version>
+	<copyright>Livecast, Inc.</copyright>
+	<supportedProfiles>extendedDesktop desktop</supportedProfiles>
+	<initialWindow>
+		<content>[この値は Flex　Builder の出力ファイル app.xml　に上書きされます]</content>
+	</initialWindow>
+	<programMenuFolder>TranslatAIR</programMenuFolder>
+	<icon>
+		<!-- <image16x16>assets/translatair_icon16.png</image16x16> -->
+		<image32x32>assets/translatair_icon32.png</image32x32>
+		<image48x48>assets/translatair_icon48.png</image48x48>
+		<!-- <image128x128>assets/translatair_icon128.png</image128x128> -->
+	</icon>
+</application>

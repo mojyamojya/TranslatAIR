@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:TitleWindow xmlns:mx="http://www.adobe.com/2006/mxml" 
+	layout="absolute" width="300" height="120" title="{this.data.title}" showCloseButton="true" close="PopUpManager.removePopUp(this)" backgroundColor="#000000" creationComplete="focusManager.setFocus(btnOK)">
+	<mx:Script>
+		<![CDATA[
+			import mx.events.CloseEvent;
+			import mx.managers.PopUpManager;
+		]]>
+	</mx:Script>
+	<mx:TextArea width="100%" height="40" text="{this.data.message}" borderStyle="none" editable="false" wordWrap="true" backgroundColor="#000000" color="#FFFFFF"/>
+	<mx:Button x="118.5" y="48" label="OK" id="btnOK" click="dispatchEvent(new CloseEvent(CloseEvent.CLOSE))"/>
+</mx:TitleWindow>

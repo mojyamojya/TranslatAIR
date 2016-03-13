@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fv:ConfigWindowBase xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:fv="jp.flashcast.translator.air.views.*"
+	xmlns:fc="jp.flashcast.translator.air.components.*" width="400" height="435" backgroundColor="#000000" creationComplete="onCreationCompleteHandler(event)">
+	<mx:Script>
+		<![CDATA[
+			import jp.flashcast.translator.air.util.Locale;
+		]]>
+	</mx:Script>
+	<mx:VBox height="100%" width="100%" verticalGap="0">
+		<mx:HBox width="100%" height="60">
+			<mx:Spacer/>
+			<mx:VBox width="100%" height="100%">
+				<mx:Spacer/>
+				<mx:HBox width="100%" verticalAlign="middle" horizontalAlign="left">
+					<mx:Label text="{Locale.localize('翻訳')}" fontWeight="normal" fontSize="11" color="#FFFFFF"/>
+				</mx:HBox>
+				<mx:HBox width="100%" verticalAlign="middle" horizontalAlign="left">
+					<mx:Spacer/>
+					<fc:ComboBoxEx width="110" id="cmbFrom"></fc:ComboBoxEx>
+					<mx:Label text="{Locale.localize('から')}" color="#FFFFFF"/>
+					<fc:ComboBoxEx width="110" id="cmbTo"></fc:ComboBoxEx>
+					<mx:Label text="{Locale.localize('に変換する')}" color="#FFFFFF"/>
+				</mx:HBox>
+			</mx:VBox>
+		</mx:HBox>
+		<mx:HBox width="100%" height="120">
+			<mx:Spacer/>
+			<mx:VBox width="100%" height="100%">
+				<mx:Spacer/>
+				<mx:HBox width="100%" verticalAlign="middle" horizontalAlign="left">
+					<mx:Label text="{Locale.localize('アイコン')}" fontSize="11" color="#FFFFFF"/>
+				</mx:HBox>
+				<mx:HBox width="100%" verticalAlign="middle" horizontalAlign="left" height="100%">
+					<mx:Spacer/>
+					<mx:VBox width="100%" height="100%">
+						<mx:RadioButtonGroup id="radioGroupTranslate" change="onRadioTranslateChangeHandler(event)"/>
+						<mx:RadioButton label="{Locale.localize('アイコンクリック時に翻訳画面を開く')}" groupName="radioGroupTranslate" color="#FFFFFF" id="radioTranslateOff" value="false" textRollOverColor="#b7babc"/>
+						<mx:RadioButton label="{Locale.localize('アイコンクリック時に翻訳する')}" groupName="radioGroupTranslate" color="#FFFFFF" id="radioTranslateOn" value="true" textRollOverColor="#b7babc"/>
+						<mx:HBox width="100%" height="100%" verticalAlign="middle">
+							<mx:Spacer/>
+							<mx:CheckBox label="{Locale.localize('クリップボードを置き換える')}" color="#FFFFFF" id="chkClipmode" textRollOverColor="#b7babc"/>
+						</mx:HBox>
+					</mx:VBox>
+				</mx:HBox>
+			</mx:VBox>
+		</mx:HBox>
+		<mx:HBox width="100%" height="185">
+			<mx:Spacer/>
+			<mx:VBox width="100%" height="100%">
+				<mx:Spacer/>
+				<mx:HBox width="100%" verticalAlign="middle" horizontalAlign="left">
+					<mx:Label text="{Locale.localize('twitter')}" fontSize="12" color="#FFFFFF"/>
+				</mx:HBox>
+				<mx:HBox width="100%" height="100%">
+					<mx:HBox width="100%" height="100%">
+						<mx:Spacer/>
+						<mx:VBox width="100%" height="100%">
+							<mx:CheckBox label="{Locale.localize('翻訳結果を投稿する')}" color="#FFFFFF" id="chkTweet" textRollOverColor="#b7babc" change="chkTweetSelectChangeHandler(event)"/>
+							<mx:HBox width="100%" height="100%">
+								<mx:Spacer/>
+								<mx:VBox width="100%" height="100%">
+									<mx:HBox width="100%" verticalAlign="middle">
+										<mx:Label text="{Locale.localize('ID(or email)')}" width="100" color="#FFFFFF"/>
+										<mx:TextInput width="220" id="txtAccount" imeMode="{IMEConversionMode.ALPHANUMERIC_HALF}" focusIn="{IME.enabled = false}"/>
+									</mx:HBox>
+									<mx:HBox width="100%" verticalAlign="middle">
+										<mx:Label text="{Locale.localize('パスワード')}" width="100" color="#FFFFFF"/>
+										<mx:TextInput displayAsPassword="true" width="220" id="txtPassword"/>
+									</mx:HBox>
+									<mx:HBox width="100%" verticalAlign="middle">
+										<mx:Label text="{Locale.localize('パスワードの確認')}" width="100" color="#FFFFFF"/>
+										<mx:TextInput displayAsPassword="true" width="220" id="txtConfirm"/>
+									</mx:HBox>
+								</mx:VBox>
+							</mx:HBox>
+							<mx:HBox width="100%" height="100%" verticalAlign="bottom" color="#FFFFFF">
+								<mx:Spacer/>
+								<mx:Label text="{Locale.localize('アイコンの回転時間')}" width="120" color="#FFFFFF"/>
+								<mx:HSlider width="200" labels="{new Array(Locale.localize('短く'), Locale.localize('長く'))}" id="sliderAnimate" minimum="6" maximum="10" snapInterval="1" dataTipPrecision="0"/>
+							</mx:HBox>
+						</mx:VBox>
+					</mx:HBox>
+				</mx:HBox>
+			</mx:VBox>
+		</mx:HBox>
+		<mx:VBox width="100%" height="100%">
+			<mx:Spacer/>
+			<mx:Spacer/>
+			<mx:HBox width="100%" height="100%" verticalAlign="top" horizontalAlign="right">
+				<mx:Button label="OK" click="btnOKClickHandler(event)"/>
+				<mx:Button label="Cancel" click="close()"/>
+				<mx:Spacer/>
+			</mx:HBox>
+		</mx:VBox>
+	</mx:VBox>
+</fv:ConfigWindowBase>
